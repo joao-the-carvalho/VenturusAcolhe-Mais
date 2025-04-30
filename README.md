@@ -1,6 +1,5 @@
 # VenturusAcolhe-Mais
 Um repositório para o projeto do curso Venturus
-<hr>
 ## Membros:
 Cesar Moreno Fernandes:
 Eduardo Cavalcante:
