@@ -12,9 +12,9 @@ app.use(cors())
 app.use(express.json())
 
 // rotas
-app.use('/api', require('./routes/authRoutes'))
-app.use('/api', require('./routes/userRoutes'))
-app.use('/api', require('./routes/agendamentoRoutes'))
+app.use('/api', require('./routes/authRotas'))
+app.use('/api', require('./routes/user'))
+app.use('/api', require('./routes/marca'))
 
 // swagger
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc))
@@ -25,3 +25,7 @@ const PORT = process.env.PORT || 3000
 sequelize.sync({ alter: true }).then(() => {
   app.listen(PORT, () => console.log(`rodando na porta ${PORT}`))
 })
+
+sequelize.query('SELECT * FROM users').then(result => {
+  console.log(result); // Mostra o resultado da query no terminal
+});
