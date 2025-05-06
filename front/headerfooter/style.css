@@ -57,6 +57,7 @@ footer{
     position: fixed;
 }
 main{
+    padding: 16px;
     padding-top: 10vh;
     padding-bottom: 6vh;
 }
