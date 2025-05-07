@@ -18,6 +18,7 @@ header{
     font-weight: bold;
     position: fixed;
     box-shadow: 0px 1px 8px black;
+    z-index: 1;
 }
 .logo{
     width: 120px;
@@ -212,7 +213,6 @@ main{
     width: 100vw;
     min-height: 42vh;
     height: auto;
-    display: flex;
 }
 .psicologo{
     height: auto;
@@ -222,6 +222,8 @@ main{
     padding: 10px;
     border-radius: 30px;
     display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .psipfpframe2{
     background-color: #fbfbfb;
@@ -391,6 +393,7 @@ main{
         display: inline-block;
         width: 70vw;
         text-align: center;
+        margin-left: 10px;
     }
     .psipfpframe2{
         margin: 20px;
