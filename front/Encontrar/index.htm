@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontrar</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Libre Baskerville' rel='stylesheet'>
+    <script src="header.js"></script>
+</head>
+<body>
+    <header id="myHeader">
+        <img src="..\Imagens\logo.jpg" class="logo">
+        <p class="he1">Como funciona</p>
+        <p class="he2">Para psicólogos</p>
+        <div class="pfpFrame">
+            <img src="..\Imagens\nopfp.png" class="pfp">
+        </div>
+    </header>
+    <main>
+        <div class="filtro">
+            <div class="esquerda">
+                <div class="filtroti">
+                    <div class="filtroti1">
+                        <p>Encontre seu psicólogo!</p>
+                    </div>
+                    <p class="filtroti2">Comece agora seu atendimento psicológico online conosco</p>
+                </div>
+                <form action="" method="POST">
+                    <div class="esp">
+                        <span class="espti">Especialidades e transtornos<br></span>
+                        <select name="espec" id="espec">
+                            <option selected>Ansiedade</option>
+                            <option>Depressão</option>
+                            <option>TOQ</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="direita">
+                    <div class="valordata">
+                        <div class="valor">
+                            <span class="valorti">Valor da consulta</span><br>
+                            <div class="valorinput">
+                                Valor mínimo (R$): <input type="number" name="valmin" id="valmin"><br>
+                                Valor máximo (R$): <input type="number" name="valmax" id="valmax">
+                            </div>
+                        </div>
+                        <div class="data">
+                            <img src="..\Imagens\calendario.png">
+                            <div class="datainput">A partir de: <input type="date" name="data" id="data" min="2025-05-06"></div>
+                        </div>
+                    </div>
+                    <input type="submit" value="Buscar" class="buscar">
+                </form>
+            </div>
+        </div>
+        <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam voluptatum fugiat maiores dicta nemo fugit itaque reprehenderit sapiente beatae suscipit accusamus error porro est magnam molestias repudiandae quidem, recusandae temporibus.</p>
+    </main>
+    <footer></footer>
+</body>
+</html>

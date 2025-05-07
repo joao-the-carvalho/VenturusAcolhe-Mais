@@ -1,0 +1,269 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+header{
+    background-color: #c6e7ff;
+    width: 100vw;
+    height: 10vh;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    display: flex;
+    font-family: "Libre Baskerville";
+    font-size: 14pt;
+    font-weight: bold;
+    position: fixed;
+    box-shadow: 0px 1px 8px black;
+}
+.logo{
+    width: 120px;
+    margin: auto;
+    margin-right: 0;
+    margin-left: 80px;
+}
+.he1{
+    margin: auto;
+    margin-left: 300px;
+    margin-right: 0px;
+}
+.he2{
+    margin: auto;
+    margin-left: 300px;
+    margin-right: 0px;
+}
+.pfpFrame{
+    margin: auto;
+    right: 100px;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-color: #ffddae;
+    display: flex;
+}
+.pfp{
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    background-color: white;
+    border-radius: 65px;
+}
+footer{
+    background-color: #c6e7ff;
+    width: 100%;
+    height: 6vh;
+    bottom: 0;
+    position: fixed;
+    box-shadow: 0px 1px 4px black;
+}
+main{
+    padding-top: 10vh;
+    padding-bottom: 6vh;
+}
+.filtro{
+    top: 0;
+    margin: 0;
+    background-color: #f6efef;
+    height: 42vh;
+    width: 100vw;
+    display: flex;
+}
+.filtro p{
+    margin: 0;
+}
+.filtroti{
+    text-align: center;
+    margin-left: 80px;
+    width: 800px;
+    padding-top: 50px;
+}
+.filtroti1{
+    font-size: 24pt;
+    background-color: #ffddae;
+    border-radius: 50px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.filtroti2{
+    font-size: 17pt;
+    font-weight: bold;
+}
+.esp{
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    width: 800px;
+    height: 150px;
+    margin-left: 80px;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding-top: 5px;
+}
+.espti{
+    color: #ff9500;
+    margin-left: 16px;
+    font-size: 20pt;
+    font-weight: bold;
+}
+.esp select{
+    width: 70%;
+    height: 70%;
+    border: 0;
+    background-color: #f6efef;
+    font-size: 35pt;
+    margin-left: 10%;
+    
+}
+.direita{
+    width: 50vw;
+    display: flex;
+}
+.esquerda{
+    width: 50vw;
+}
+.valor{
+    margin-top: 50px;
+    width: 600px;
+    height: 100px;
+    margin-left: 80px;
+    padding-top: 15px;
+    text-align: center;
+    font-weight: bold;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 10px;
+}
+.valorti{
+    font-size: 16pt;
+    
+}
+.valorinput{
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+    width: 310px;
+    height: 60px;
+    color: #ff9500;
+    text-align: right;
+}
+.valorinput input{
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-color: #a36002;
+    background-color: #ff9500;
+}
+.valorinput input:hover{
+    opacity: 80%;
+}
+.data{
+    margin-top: 50px;
+    margin-left: 80px;
+    width: 600px;
+    height: 100px;
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    border-radius: 10px;
+}
+.data img{
+    height: 70px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 50px;
+}
+.datainput{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 20px;
+    font-size: 20pt;
+    font-weight: bold;
+}
+.datainput input{
+    width: 200px;
+    height: 30px;
+    font-size: 20pt;
+    background-color: #f6efef;
+    border-width: 0;
+    margin-left: 20px;
+}
+.buscar{
+    margin-left: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 90px;
+    width: 140px;
+    font-size: 15pt;
+    font-weight: bold;
+    background-color: #ffddae;
+    border-color: #ffddae;
+    border-radius: 20px;
+}
+.buscar:hover{
+    opacity: 80%;
+}
+@media(max-width: 768px) {
+    .he1, .he2 {
+        margin-left: 30px;
+    }
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        padding: 10px 0;
+    }
+    .filtro{
+        display: block;
+        height: 90vh;
+    }
+    .filtroti{
+        text-align: left;
+        margin-left: 10px;
+    }
+    .filtroti1{
+        margin-left: 10px;
+        text-align: center;
+    }
+    .filtroti2{
+        width: 500px;
+    }
+    .esp{
+        margin-left: 10px;
+        width: 500px;
+    }
+    .direita{
+        display: block;
+    }
+    .valor{
+        margin-left: 10px;
+        width: 500px;
+    }
+    .data{
+        margin-left: 10px;
+        width: 500px;
+        margin-bottom: 10px;
+    }
+    .buscar{
+        margin-left: 10px;
+    }
+}
+@layer base {
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number'] {
+      -webkit-appearance: none;
+      margin: 0;
+      -moz-appearance: textfield !important;
+    }
+}
+.test{
+    font-size: 50pt;
+}
