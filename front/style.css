@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    overflow: hidden;
+}
+body{
+    background-color: #FBFBFB;
+    font-family: 'Libre Baskerville';
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+header{
+    background-color: #C7E7FF;
+    width: 100%;
+padding: 30px 4%;
+position: relative;
+z-index: 1;
+top: 0;
+left: 0;
+}
+.coluninhas{
+    max-width: 1280px;
+    max-height: 720px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    justify-content: space-around;
+}
+.imagem{
+    width:100px;
+}

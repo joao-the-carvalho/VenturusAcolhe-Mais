@@ -1,14 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="headerfooter/style.css">
-    <title>Como Funciona?</title>
-</head>
-<body>
-    <style>
-        .he1:hover{
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Como funciona</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      width: 100%;
+      background-color: #FBFBFB;
+      font-family: 'Libre Baskerville', serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    header {
+      background-color: #c6e7ff;
+      width: 100%;
+      height: 10vh;
+      display: flex;
+      font-family: "Libre Baskerville";
+      font-size: 14pt;
+      font-weight: bold;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      width: 120px;
+      margin: auto;
+      margin-right: 0;
+      margin-left: 80px;
+    }
+
+    .he1 {
+      margin: auto;
+      margin-left: 300px;
+      margin-right: 0px;
+    }
+
+    .he2 {
+      margin: auto;
+      margin-left: 300px;
+      margin-right: 0px;
+    }
+
+    .pfpFrame {
+      margin: auto;
+      right: 100px;
+      width: 70px;
+      height: 70px;
+      border-radius: 70px;
+      background-color: #ffddae;
+      display: flex;
+    }
+
+    .pfp {
+      width: 65px;
+      height: 65px;
+      margin: auto;
+      background-color: white;
+      border-radius: 65px;
+    }
+
+    footer {
+      background-color: #c6e7ff;
+      width: 100%;
+      height: 6vh;
+      bottom: 0;
+      position: fixed;
+    }
+
+    main {
+      padding-top: 10vh;
+      padding-bottom: 6vh;
+    }
+
+    .coluninhas {
+      max-width: 1280px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 40px 20px;
+      flex-wrap: wrap;
+    }
+
+    .text-box {
+      flex: 1;
+      min-width: 300px;
+      padding-right: 40px;
+    }
+
+    .text-box h1 {
+      background-color: #ffe0b2;
+      display: inline-block;
+      padding: 10px 15px;
+      font-size: 32px;
+    }
+
+    .text-box p {
+      font-size: 18px;
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .orange {
+      color: #f57c00;
+      font-weight: bold;
+    }
+
+    .red {
+      color: #d32f2f;
+      font-weight: bold;
+    }
+
+    .img-box {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .img-box img {
+      max-width: 100%;
+      border: 4px solid #ffa726;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .img-box p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #ffa726;
+      color: black;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background-color: #fb8c00;
+    }
+
+    @media(max-width: 768px) {
+      .coluninhas {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .text-box {
+        padding-right: 0;
+      }
+
+      .he1, .he2 {
+        margin-left: 30px;
+      }
+
+      header {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        padding: 10px 0;
+      }
+    }
+    .he1:hover{
             transition-timing-function: ease-in;
             transition: color 0.5s;
             color: #FF9500;
@@ -18,17 +191,47 @@
             transition: color 0.5s;
             color: black;
         }
-    </style>
-    <header id="myHeader">
-        <img src="..\Imagens\logo.jpg" class="logo">
-        <p class="he1">Como funciona</p>
-        <p class="he2">Para psicólogos</p>
-        <div class="pfpFrame">
-            <img src="..\Imagens\nopfp.png" class="pfp">
-        </div>
-    </header>
-    <main>
-    </main>
-    <footer></footer>
+        .divider {
+            position: fixed;
+  top: 10vh; /* começa abaixo do header */
+  bottom: 6vh; /* termina acima do footer */
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 7px dotted #ffa726;
+  z-index: 1;
+        }
+  </style>
+</head>
+<body>
+  <header id="myHeader">
+    <img src="Imagens/logo.jpg" class="logo" />
+    <a class="he1" href=""><p>Como funciona</p></a>
+    <a class="he2" href=""><p>Para psicólogos</p></a>
+    <div class="pfpFrame">
+      <img src="Imagens/nopfp.png" class="pfp" />
+    </div>
+  </header>
+
+  <main>
+    <section class="coluninhas">
+      <div class="text-box">
+        <h1>Como funciona a<br>terapia online!</h1>
+        <p>A <span class="red">Acolhe+</span> oferece um meio simples e direto de contatar psicólogos profissionais.</p>
+        <p>Encontre um <span class="orange">psicólogo</span> de acordo com a <span class="orange">demanda</span> que você tem e entre em contato imediatamente para <span class="orange">agendar seu atendimento!</span></p>
+        <p>Nosso serviço foi pensado para ser acessível a quem mais precisa: <span class="orange">você</span>!</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="img-box">
+        <img src="Imagens/pessoas.jpeg" alt="Grupo de pessoas sorrindo" />
+        <p>Entre em contato agora mesmo com um psicólogo na <span class="red">Acolhe+</span> e transforme sua saúde mental!</p>
+        <a href="#" class="btn">Começar agora!</a>
+      </div>
+    </section>
+  </main>
+
+  <footer></footer>
+
 </body>
 </html>
