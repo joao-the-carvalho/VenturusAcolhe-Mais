@@ -1,8 +1,9 @@
-module.exports = (sequelize, DataTypes) => {
-    const User = sequelize.define('User', {
-      name: DataTypes.STRING,
-      email: DataTypes.STRING,
-      password: DataTypes.STRING
-    })
-    return User
-  }
+// routes/user.js
+const express = require('express');
+const router = express.Router();
+const userControle = require('../controllers/userControle'); // Certifique-se de que o caminho está correto
+
+// Rota para criar um novo usuário
+router.post('/user', userControle.createUser);
+
+module.exports = router;

@@ -12,51 +12,55 @@ dotenv.config()
 const app = express()
 app.use(cors())
 app.use(express.json())
+app.use(express.urlencoded({ extended: true })) // necessário pro form
 
 // rotas
-app.use('/api', require('./routes/authRotas'))
-app.use('/api', require('./routes/user'))
+app.use('/api', require('./routes/authRotas')); 
+app.use('/api', require('./routes/user'))  // Rota para o user
 app.use('/api', require('./routes/marca'))
 
 // swagger
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc))
 
-
-app.use(express.static(path.join(__dirname, '../front')));
-
-
+// Diretório front
 const frontDir = path.join(__dirname, '../front')
 
-// Rota para o index.html
+// Serve arquivos estáticos do diretório 'front'
+app.use(express.static(frontDir))
+
+// Rota para listar os arquivos da pasta 'front'
 app.get('/list', (req, res) => {
   fs.readdir(frontDir, (err, files) => {
     if (err) {
       return res.status(500).send('Erro ao ler o diretório.')
     }
 
+    const fileLinks = files.map(file => {
+      const fileUrl = `/front/${file}`
+      return `<li><a href="${fileUrl}" target="_blank">${file}</a></li>`
+    }).join('')
+
     res.send(`
       <h1>Conteúdo da pasta "front"</h1>
       <ul>
-        ${files.map(file => `<li><a href="/${file}">${file}</a></li>`).join('')}
+        ${fileLinks}
       </ul>
     `)
   })
 })
 
-app.use(express.static(frontDir))
-
-// Rota para o arquivo index.html
+// Rota para o arquivo index.html (verifique se o caminho está certo)
 app.get('/', (req, res) => {
-  res.sendFile(path.join(frontDir, '/headerfooter/index.htm'))
+  res.sendFile(path.join(frontDir, 'headerfooter', 'index.htm'))  // Corrigido o caminho
 })
 
 // iniciar servidor
 const PORT = process.env.PORT || 3000
 
 sequelize.sync({ alter: true }).then(() => {
-  app.listen(PORT, () => console.log(`rodando na porta ${PORT}`))
+  app.listen(PORT, () => console.log(`Rodando na porta ${PORT}`))
 })
 
 sequelize.query('SELECT * FROM users').then(result => {
-  console.log(result); // Mostra o resultado da query no terminal
-});
+  console.log(result) // Mostra o resultado da query no terminal
+})
