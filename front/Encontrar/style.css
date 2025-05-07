@@ -23,16 +23,16 @@ header{
     width: 120px;
     margin: auto;
     margin-right: 0;
-    margin-left: 80px;
+    margin-left: 4vw;
 }
 .he1{
     margin: auto;
-    margin-left: 300px;
+    margin-left: 17vw;
     margin-right: 0px;
 }
 .he2{
     margin: auto;
-    margin-left: 300px;
+    margin-left: 17vw;
     margin-right: 0px;
 }
 .pfpFrame{
@@ -112,8 +112,8 @@ main{
     font-weight: bold;
 }
 .esp select{
-    width: 70%;
-    height: 70%;
+    width: 75%;
+    height: 75%;
     border: 0;
     background-color: #f6efef;
     font-size: 35pt;
@@ -210,19 +210,75 @@ main{
 .buscar:hover{
     opacity: 80%;
 }
-@media(max-width: 768px) {
-    .he1, .he2 {
-        margin-left: 30px;
-    }
-    header {
-        flex-wrap: wrap;
-        justify-content: center;
+.subfiltro{
+    width: 100vw;
+    min-height: 42vh;
+    height: auto;
+    display: flex;
+}
+.psicologo{
+    height: 38vh;
+    width: 95vw;
+    background-color: #c6e7ff;
+    margin: auto;
+    border-radius: 30px;
+    display: flex;
+}
+.psipfpframe2{
+    background-color: #fbfbfb;
+    height: 95%;
+    width: 18%;
+    border-radius: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0.5%;
+}
+.psipfpframe3{
+    display: flex;
+    height: 85%;
+    width: 100%;
+    display: flex;
+}
+.psipfpframe{
+    height: 85%;
+    width: 74%;
+    border-radius: 75%;
+    margin: auto;
+    background-color: #ff9500;
+    display: flex;
+}
+.psipfpframe img{
+    height: 98%;
+    margin: auto;
+    background-color: white;
+    border-radius: 98%;
+}
+.psiprecoframe{
+    display: flex;
+}
+.psiprecoframe p{
+    margin: auto;
+    margin-top: 2%;
+    font-size: 20pt;
+    color: #ff9500;
+    font-weight: bold;
+}
+@media(max-height: 800px){
+    .filtro{
         height: auto;
-        padding: 10px 0;
+        padding-bottom: 20px;
     }
+}
+@media(max-height: 700px){
+    header{
+        height: 20vh;
+    }
+}
+@media(max-width: 1600px){
     .filtro{
         display: block;
-        height: 90vh;
+        height: auto;
+        
     }
     .filtroti{
         text-align: left;
@@ -253,7 +309,20 @@ main{
     }
     .buscar{
         margin-left: 10px;
+        margin-bottom: 20px;
     }
+}
+@media(max-width: 768px) {
+    .he1, .he2 {
+        margin-left: 30px;
+    }
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        padding: 10px 0;
+    }
+    
 }
 @layer base {
     input[type='number']::-webkit-outer-spin-button,
@@ -263,7 +332,4 @@ main{
       margin: 0;
       -moz-appearance: textfield !important;
     }
-}
-.test{
-    font-size: 50pt;
 }
