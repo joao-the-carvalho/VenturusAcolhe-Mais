@@ -32,7 +32,7 @@
                         <select name="espec" id="espec">
                             <option selected>Ansiedade</option>
                             <option>Depressão</option>
-                            <option>TOQ</option>
+                            <option>TOC</option>
                             <option>Outro</option>
                         </select>
                     </div>
@@ -42,8 +42,14 @@
                         <div class="valor">
                             <span class="valorti">Valor da consulta</span><br>
                             <div class="valorinput">
-                                Valor mínimo (R$): <input type="number" name="valmin" id="valmin"><br>
-                                Valor máximo (R$): <input type="number" name="valmax" id="valmax">
+                                <div class="slider">
+                                    <div class="min-max-slider" data-legendnum="2">
+                                        <label for="min">Minimum price</label>
+                                        <input id="min" class="min" name="min" type="range" step="1" min="30" max="100" />
+                                        <label for="max">Maximum price</label>
+                                        <input id="max" class="max" name="max" type="range" step="1" min="30" max="100" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="data">
@@ -64,12 +70,35 @@
                         </div>
                     </div>
                     <div class="psiprecoframe">
-                        <p>preço</p>
+                        <p>R$__,__</p>
                     </div>
+                </div>
+                <div class="info">
+                    <p class="psinome">Nome completo</p>
+                    <div class="gencrp">
+                        <p class="genero">Psicólogo(a)</p><p class="crp">CRP</p>
+                    </div>
+                    <p class="sobre">Sobre mim:</p>
+                    <p class="psidesc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere nulla, nesciunt optio veritatis excepturi, ducimus ut, rem modi rerum laudantium placeat? Beatae tempora at aspernatur asperiores necessitatibus rerum amet mollitia.</p>
+                </div>
+                <div class="psiesp">
+                    <div class="carta">
+                        <p>Ansiedade</p>
+                    </div>
+                    <div class="carta">
+                        <p>Depressão</p>
+                    </div>
+                </div>
+                <div class="psidata">
+                    <form action="" method="post">
+                        <input type="datetime-local" id="agenda" name="agenda" class="agenda">
+                        <input type="submit" class="agendar" value="Agendar"> 
+                    </form>
                 </div>
             </div>
         </div>
     </main>
     <footer></footer>
+    <script src="script.js"></script>
 </body>
 </html>
