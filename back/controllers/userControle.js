@@ -1,5 +1,5 @@
 // controllers/userControle.js
-const User = require('../models/User');  // Corrigir a importação
+const User = require('../models/User');
 
 exports.createUser = async (req, res) => {
   const { nome, email, senha, cargo } = req.body;

@@ -54,12 +54,24 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(frontDir, 'headerfooter', 'index.htm'))  // Corrigido o caminho
 })
 
+app.use(express.static(path.join(__dirname, '../front')))
+
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, '../front', 'testelogin.html'))
+})
+
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, '../front', 'testeregistro.html'))
+})
+
 // iniciar servidor
 const PORT = process.env.PORT || 3000
 
-sequelize.sync({ alter: true }).then(() => {
+sequelize.sync().then(() => {
   app.listen(PORT, () => console.log(`Rodando na porta ${PORT}`))
 })
+
+
 
 sequelize.query('SELECT * FROM users').then(result => {
   console.log(result) // Mostra o resultado da query no terminal
