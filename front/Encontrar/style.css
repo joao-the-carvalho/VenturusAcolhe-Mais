@@ -120,6 +120,9 @@ main{
     margin-left: 10%;
     
 }
+.esp select:hover{
+    cursor: pointer;
+}
 .direita{
     width: 50vw;
     display: flex;
@@ -145,23 +148,14 @@ main{
     
 }
 .valorinput{
-    margin-top: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: auto;
-    width: 310px;
-    height: 60px;
+    display: flex;
+    height: 90%;
+    width: 100%;
+    margin-top: 15px;
     color: #ff9500;
-    text-align: right;
 }
-.valorinput input{
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border-color: #a36002;
-    background-color: #ff9500;
-}
-.valorinput input:hover{
-    opacity: 80%;
+.slider{
+    margin: auto;
 }
 .data{
     margin-top: 50px;
@@ -195,6 +189,9 @@ main{
     border-width: 0;
     margin-left: 20px;
 }
+.datainput input:hover{
+    cursor: pointer;
+}
 .buscar{
     margin-left: 100px;
     margin-top: auto;
@@ -209,6 +206,7 @@ main{
 }
 .buscar:hover{
     opacity: 80%;
+    cursor: pointer;
 }
 .subfiltro{
     width: 100vw;
@@ -217,21 +215,23 @@ main{
     display: flex;
 }
 .psicologo{
-    height: 38vh;
+    height: auto;
     width: 95vw;
     background-color: #c6e7ff;
     margin: auto;
+    padding: 10px;
     border-radius: 30px;
     display: flex;
 }
 .psipfpframe2{
     background-color: #fbfbfb;
-    height: 95%;
-    width: 18%;
+    height: 330px;
+    width: 600px;
     border-radius: 30px;
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 0.5%;
+    margin-right: 60px;
 }
 .psipfpframe3{
     display: flex;
@@ -240,8 +240,8 @@ main{
     display: flex;
 }
 .psipfpframe{
-    height: 85%;
-    width: 74%;
+    height: 250px;
+    width: 250px;
     border-radius: 75%;
     margin: auto;
     background-color: #ff9500;
@@ -262,6 +262,82 @@ main{
     font-size: 20pt;
     color: #ff9500;
     font-weight: bold;
+}
+.info{
+    margin-right: 60px;
+    font-weight: bold;
+}
+.psinome{
+    font-size: 30pt;
+    margin: 15px;
+}
+.genero, .crp{
+    font-size: 20pt;
+}
+.genero{
+    margin-left: 15px;
+}
+.crp{
+    margin-left: 50px;
+}
+.sobre, .psidesc{
+    text-align: center;
+}
+.sobre{
+    font-size: 18pt;
+    margin-top: 50px;
+    color: #ff9500;
+}
+.psidesc{
+    font-size: 15pt;
+}
+.psiesp, .psidata{
+    height: 300px;
+    width: 500px;
+    background-color: #FFFFFF;
+    margin: auto;
+    margin-right: 60px;
+    border-radius: 30px;
+}
+.carta{
+    font-size: 20pt;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 10px;
+    background-color: #ffddae;
+    text-align: center;
+    height: 16%;
+    width: 80%;
+    display: flex;
+    border-radius: 20px;
+}
+.carta p{
+    margin: auto;
+}
+.psidata{
+    text-align: center;
+}
+.agenda{
+    margin-top: 25px;
+}
+.agenda:hover{
+    cursor: pointer;
+}
+.agendar{
+    margin-top: 200px;
+    height: 40px;
+    width: 55%;
+    font-weight: bold;
+    font-size: 15pt;
+    background-color: #ff9500;
+    border-radius: 15px;
+}
+.agendar:hover{
+    opacity: 85%;
+    cursor: pointer;
+}
+.gencrp{
+    display: flex;
 }
 @media(max-height: 800px){
     .filtro{
@@ -311,6 +387,33 @@ main{
         margin-left: 10px;
         margin-bottom: 20px;
     }
+    .psicologo{
+        display: inline-block;
+        width: 70vw;
+        text-align: center;
+    }
+    .psipfpframe2{
+        margin: 20px;
+        width: auto;
+    }
+    .psipfpframe{
+        height: 200px;
+        width: 200px;
+    }
+    .info{
+        margin: auto;
+    }
+    .psiesp, .psidata{
+        width: auto;
+        margin: 10pt;
+    }
+    .psiesp{
+        padding-top: 10px;
+    }
+    .gencrp{
+        display: inline-block;
+        text-align: left;
+    }
 }
 @media(max-width: 768px) {
     .he1, .he2 {
@@ -333,3 +436,30 @@ main{
       -moz-appearance: textfield !important;
     }
 }
+.min-max-slider {position: relative; width: 200px; text-align: center; margin-bottom: 50px;}
+.min-max-slider > label {display: none;}
+span.value {height: 1.7em; font-weight: bold; display: inline-block;}
+span.value.lower::before {content: "R$"; display: inline-block;}
+span.value.upper::before {content: "- R$"; display: inline-block; margin-left: 0.4em;}
+.min-max-slider > .legend {display: flex; justify-content: space-between;}
+.min-max-slider > .legend > * {font-size: small; opacity: 0.25;}
+.min-max-slider > input {cursor: pointer; position: absolute;}
+
+/* webkit specific styling */
+.min-max-slider > input {
+  -webkit-appearance: none;
+  outline: none!important;
+  background: transparent;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 30%, #ffddae 30%, silver 60%, transparent 60%, transparent 100%);
+}
+.min-max-slider > input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 14px; /* Set a specific slider handle width */
+  height: 14px; /* Slider handle height */
+  background: #ff9500; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border: 1px solid #ff9500;
+  border-radius: 100%;
+}
+.min-max-slider > input::-webkit-slider-runnable-track {cursor: pointer;}
