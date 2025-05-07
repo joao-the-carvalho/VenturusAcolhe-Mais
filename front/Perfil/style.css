@@ -4,6 +4,7 @@ body{
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    font-family: "Libre Baskerville";
 }
 header{
     background-color: #c6e7ff;
@@ -12,8 +13,7 @@ header{
     padding: 0;
     margin: 0;
     top: 0;
-    display: flex;
-    font-family: "Libre Baskerville";
+    display: flex;   
     font-size: 14pt;
     font-weight: bold;
     position: fixed;
@@ -70,9 +70,9 @@ main{
 .titulo{
     background-color: #c6e7ff;
     font-weight: bold;
-    font-size: 25pt;
+    font-size: 23pt;
     margin-left: 50px;
-    width: 170px;
+    width: 200px;
     border-radius: 30px;
     text-align: center;
 }
@@ -141,21 +141,58 @@ a img{
     width: 430px;
     height: 55px;
     font-size: 20pt;
-    border-color: #f6efef;
+    border-width: 0;
     background-color: #f6efef;
 }
-@media(max-height: 800px){
-    .filtro{
-        height: auto;
-        padding-bottom: 20px;
-    }
+.botao{
+    margin-top: 30px;
+}
+.editar{
+    margin: auto;
+    height: 50px;
+    width: 150px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 20pt;
+    background-color: #ff9500;
+    border-color: #ff9500;
 }
 @media(max-height: 700px){
     header{
         height: 20vh;
     }
+    main{
+        padding-top: 20vh;
+    }
 }
 
+@media(max-width: 1020px){
+    .topo{
+        margin-top: 50px;
+    }
+    .baixo{
+        height: auto;
+        display: inline-block;
+        width: 100vw;
+    }
+    .esquerda, .direita, .perfilpfpframe, .campos{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .perfilpfpframe{
+        margin-bottom: 5px;
+        height: 400px;
+        width: 400px;
+    }
+    .campos{
+        width: 90vw;
+    }
+    .inputs input{
+        width: 75vw;
+    }
+}
 @media(max-width: 768px) {
     .he1, .he2 {
         margin-left: 30px;
@@ -167,4 +204,15 @@ a img{
         padding: 10px 0;
     }
     
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
