@@ -1,0 +1,170 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+header{
+    background-color: #c6e7ff;
+    width: 100vw;
+    height: 10vh;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    display: flex;
+    font-family: "Libre Baskerville";
+    font-size: 14pt;
+    font-weight: bold;
+    position: fixed;
+    box-shadow: 0px 1px 8px black;
+    z-index: 1;
+}
+.logo{
+    width: 120px;
+    margin: auto;
+    margin-right: 0;
+    margin-left: 4vw;
+}
+.he1{
+    margin: auto;
+    margin-left: 17vw;
+    margin-right: 0px;
+}
+.he2{
+    margin: auto;
+    margin-left: 17vw;
+    margin-right: 0px;
+}
+.pfpFrame{
+    margin: auto;
+    right: 100px;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-color: #ffddae;
+    display: flex;
+}
+.pfp{
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    background-color: white;
+    border-radius: 65px;
+}
+footer{
+    background-color: #c6e7ff;
+    width: 100%;
+    height: 6vh;
+    bottom: 0;
+    position: fixed;
+    box-shadow: 0px 1px 4px black;
+}
+main{
+    padding-top: 10vh;
+    padding-bottom: 6vh;
+}
+.topo{
+    height: 50px;
+}
+.titulo{
+    background-color: #c6e7ff;
+    font-weight: bold;
+    font-size: 25pt;
+    margin-left: 50px;
+    width: 170px;
+    border-radius: 30px;
+    text-align: center;
+}
+hr{
+    width: 95vw;
+    background-color: #c6e7ff;
+    border-color: #c6e7ff;
+}
+.baixo{
+    display: flex;
+    height: 70vh;
+}
+.esquerda, .direita{
+    margin: auto;
+    text-align: center;
+}
+.perfilpfpframe{
+    background-color: #ff9500;
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    display: flex;
+}
+.perfilpfpframe img{
+    height: 97%;
+    background-color: white;
+    border-radius: 50%;
+    margin: auto;
+}
+a{
+    font-size: 15pt;
+    font-weight: bold;
+    color: black;
+}
+a img{
+    height: 20px;
+}
+.campos{
+    height: 600px;
+    width: 500px;
+    border-radius: 2%;
+    background-color: #f6efef;
+    padding-top: 10px;
+}
+.inputs{
+    text-align: left;
+    margin-left: 10px;
+}
+.nome, .usuario, .datanasc, .cell, .email{
+    width: 90%;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    height: 90px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+.nome p, .usuario p, .datanasc p, .cell p, .email p{
+    margin-left: 3px;
+    margin-top: 3px;
+    margin-bottom: 0;
+    font-size: 14pt;
+    color: #ff9500;
+}
+.nome input, .usuario input, .datanasc input, .cell input, .email input{
+    width: 430px;
+    height: 55px;
+    font-size: 20pt;
+    border-color: #f6efef;
+    background-color: #f6efef;
+}
+@media(max-height: 800px){
+    .filtro{
+        height: auto;
+        padding-bottom: 20px;
+    }
+}
+@media(max-height: 700px){
+    header{
+        height: 20vh;
+    }
+}
+
+@media(max-width: 768px) {
+    .he1, .he2 {
+        margin-left: 30px;
+    }
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+        padding: 10px 0;
+    }
+    
+}
