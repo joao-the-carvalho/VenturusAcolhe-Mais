@@ -2,27 +2,29 @@
 const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 
-exports.createUser = async (req, res) => {
-  const { nome, email, senha, cargo } = req.body
+exports.createPsico = async (req, res) => {
+  const { nome, email, senha, especialidades, crp, termos } = req.body
 
-  if (!nome || !email || !senha || !cargo) {
+  if (!nome || !email || !senha || !especialidades || !crp || !termos) {
     return res.status(400).json({ mensagem: 'Preencha todos os campos' })
   }
 
   try {
-    const user = await prisma.user.create({
+    const psico = await prisma.psicologos.create({
       data: {
         nome,
         email,
         senha,
-        cargo
+        especialidades,
+        crp,
+        termsAccepted: termos
       }
     })
 
-    return res.status(201).json({ mensagem: 'Usuário criado com sucesso', user })
+    return res.status(201).json({ mensagem: 'Usuário criado com sucesso', psico })
   } catch (erro) {
     console.error('erro detalhado:', erro)
     res.status(500).json({ mensagem: 'Erro no servidor', erro: erro.message || erro })
   }
 }
-
+ 

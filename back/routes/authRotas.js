@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const authController = require('../controllers/authControle');  // Verifique se o caminho está correto
+const authController = require('../controllers/authControle');
 
-// Rota para login
-router.post('/register', authController.register)
-router.post('/login', authController.login)
-
+router.post('/cadastro', authController.register)
+router.post('/login', authController.login);
+router.post('/auth/cadastrarpsicologo', authController.cadastrarPsicologo)
+router.post('/auth/login-psicologo', authController.loginPsicologo)
 
 module.exports = router;

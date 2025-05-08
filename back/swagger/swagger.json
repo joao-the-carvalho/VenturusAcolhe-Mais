@@ -1,66 +1,95 @@
 {
-    "openapi": "3.0.0",
-    "info": {
-      "title": "API Psicólogos",
-      "version": "1.0.0",
-      "description": "API para login e registro de usuários e psicólogos"
-    },
-    "paths": {
-      "/auth/register": {
-        "post": {
-          "summary": "Registrar novo usuário ou psicólogo",
-          "requestBody": {
-            "required": true,
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "nome": { "type": "string" },
-                    "email": { "type": "string", "format": "email" },
-                    "senha": { "type": "string" },
-                    "tipo": {
-                      "type": "string",
-                      "enum": ["usuario", "psicologo"]
-                    }
-                  },
-                  "required": ["nome", "email", "senha", "tipo"]
-                }
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API Psicólogos - Acolhe+",
+    "version": "1.0.0",
+    "description": "API para login e registro de usuários e psicólogos no sistema Acolhe+"
+  },
+  "paths": {
+    "/auth/register": {
+      "post": {
+        "summary": "Registrar novo usuário (Paciente)",
+        "tags": ["Usuários"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nome": { "type": "string" },
+                  "email": { "type": "string", "format": "email" },
+                  "senha": { "type": "string" },
+                  "telefone": { "type": "string" }
+                },
+                "required": ["nome", "email", "senha", "telefone"]
               }
             }
-          },
-          "responses": {
-            "201": { "description": "Usuário criado com sucesso" },
-            "400": { "description": "Erro na validação ou usuário já existe" }
           }
+        },
+        "responses": {
+          "201": { "description": "Usuário criado com sucesso" },
+          "400": { "description": "Campos obrigatórios faltando" },
+          "409": { "description": "Email já cadastrado" }
         }
-      },
-      "/auth/login": {
-        "post": {
-          "summary": "Fazer login",
-          "requestBody": {
-            "required": true,
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "properties": {
-                    "email": { "type": "string", "format": "email" },
-                    "senha": { "type": "string" }
-                  },
-                  "required": ["email", "senha"]
-                }
+      }
+    },
+    "/auth/cadastrarpsicologo": {
+      "post": {
+        "summary": "Registrar novo psicólogo",
+        "tags": ["Psicólogos"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nome": { "type": "string" },
+                  "email": { "type": "string", "format": "email" },
+                  "senha": { "type": "string" },
+                  "especialidades": { "type": "string" },
+                  "crp": { "type": "string" },
+                  "termsAccepted": { "type": "boolean" }
+                },
+                "required": ["nome", "email", "senha", "crp", "termsAccepted"]
               }
             }
-          },
-          "responses": {
-            "200": {
-              "description": "Login realizado com sucesso, retorna token"
-            },
-            "401": { "description": "Credenciais inválidas" }
           }
+        },
+        "responses": {
+          "201": { "description": "Psicólogo cadastrado com sucesso" },
+          "400": { "description": "Campos obrigatórios faltando ou dados já existem" },
+          "500": { "description": "Erro interno do servidor" }
+        }
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "Fazer login",
+        "tags": ["Autenticação"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "email": { "type": "string", "format": "email" },
+                  "senha": { "type": "string" }
+                },
+                "required": ["email", "senha"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Login realizado com sucesso" },
+          "401": { "description": "Senha incorreta" },
+          "404": { "description": "Usuário não encontrado" },
+          "500": { "description": "Erro no servidor" }
         }
       }
     }
   }
-  
+}
