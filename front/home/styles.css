@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #fff;
+    color: #000;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for background and text color */
+}
+
+header {
+    background-color: #c6e7ff;
+    width: 100%;
+    height: 8vh;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    font-family: "Libre Baskerville";
+    font-size: 14pt;
+    font-weight: bold;
+    color: #000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for header */
+}
+
+header .logo {
+    margin-left: 0;
+}
+
+header nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for link hover */
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+header .btn-entrar {
+    background-color: #FFDDAE;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 0;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for button hover and click */
+}
+
+header .btn-entrar:hover {
+    background-color: #FFC98B;
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.logo {
+    width: 120px;
+    margin: auto;
+    margin-right: 0;
+    margin-left: 80px;
+}
+
+.he1, .he2 {
+    margin: auto;
+    margin-left: 300px;
+    margin-right: 0px;
+}
+
+.pfpFrame {
+    margin: auto;
+    right: 100px;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-color: #ffddae;
+    display: flex;
+}
+
+.pfp {
+    width: 65px;
+    height: 65px;
+    margin: auto;
+    background-color: white;
+    border-radius: 65px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero-text {
+    max-width: 80%;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+}
+
+.sub-highlight {
+    font-size: 32px;
+    background-color: #d1f3fa;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #000;
+    border-right: 4px solid #000;
+    font-style: italic;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.btn-cta {
+    background-color: #ffe2ae;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: inline-block;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for button hover and click */
+}
+
+.btn-cta:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.btn-conta {
+    background-color: #ffe2ae;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14pt;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: auto;
+    margin-right: 80px;
+}
+
+.hero-img {
+    max-width: 50%;
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.hero-img img {
+    width: 700px;
+    border-radius: 20px;
+    border: 4px solid #ffe2ae;
+    margin-right: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for image hover */
+}
+
+.hero-img img:hover {
+    transform: scale(1.02); /* Slight zoom effect on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+footer {
+    background-color: #c6e7ff; /* Match header background color */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #000;
+    position: relative; /* Change to relative positioning */
+    bottom: 0;
+    width: 100%; /* Ensure it spans the full width */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for footer */
+}
+
+footer p {
+    margin: 5px 0; /* Add spacing between paragraphs */
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease; /* Smooth transition for link hover */
+}
+
+footer a:hover {
+    color: #FFC98B; /* Match hover color */
+}
+
+/* Reusable header styles */
+.header {
+    background-color: #c6e7ff; /* Match header background color */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: "Libre Baskerville", serif;
+    font-size: 14pt;
+    font-weight: bold;
+    color: #000;
+    position: fixed; /* Fix header at the top */
+    top: 0; /* Align to the top of the screen */
+    width: 100%; /* Ensure it spans the full width */
+    z-index: 1000; /* Ensure it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for header */
+}
+
+.header-title {
+    font-size: 24px;
+    color: #000;
+}
+
+.header-title span {
+    color: #FFDDAE; /* Highlight "+" */
+}
+
+.nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite quebra de linha em telas menores */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.nav-list li {
+    margin-right: 20px; /* Add spacing between list items */
+}
+
+.nav-list li:last-child {
+    margin-right: 0; /* Remove margin for the last item */
+}
+
+.nav-link {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for link hover */
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.btn-entrar {
+    background-color: #FFDDAE; /* Match button background color */
+    color: #000; /* Match button text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for button hover and click */
+}
+
+.btn-entrar:hover {
+    background-color: #FFC98B; /* Match button hover color */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Estilos para o contêiner do perfil */
+.profile-card {
+    width: 350px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-content {
+    padding: 20px;
+}
+
+.profile-content h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 18px;
+}
+
+.profile-picture {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.change-photo {
+    background: none;
+    border: none;
+    color: #5ba4e5; /* Azul claro */
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+.change-photo:hover {
+    color: #3d8edb; /* Azul médio */
+}
+
+.profile-field {
+    margin-bottom: 15px;
+}
+
+.profile-field label {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.profile-field p {
+    margin: 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+}
+
+.edit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #5ba4e5; /* Azul claro */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.edit-btn:hover {
+    background-color: #3d8edb; /* Azul médio */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        height: auto; /* Adjust header height */
+        padding: 10px;
+    }
+
+    .logo {
+        margin: 10px auto;
+        width: 80px; /* Adjust logo size */
+    }
+
+    .he1, .he2 {
+        margin: 10px auto;
+    }
+
+    .pfpFrame {
+        margin: 10px auto;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 15px; /* Increase spacing for better readability */
+    }
+
+    header .btn-entrar {
+        margin-top: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-img {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-img img {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+
+    .btn-cta {
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px 0; /* Adjust footer padding */
+    }
+
+    .profile-card {
+        width: 90%; /* Ajusta a largura para telas menores */
+    }
+
+    .nav {
+        flex-direction: column; /* Reorganiza o menu em coluna */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .nav-list {
+        flex-direction: column; /* Reorganiza os itens do menu em coluna */
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        height: auto; /* Further adjust header height */
+    }
+
+    header .logo {
+        width: 60px; /* Further adjust logo size */
+    }
+
+    .hero-text h1 {
+        font-size: 22px; /* Reduce font size for smaller screens */
+    }
+
+    .sub-highlight {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .btn-cta {
+        font-size: 14px;
+    }
+
+    header nav {
+        gap: 10px; /* Adjust spacing for smaller screens */
+    }
+
+    header .btn-entrar {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    footer {
+        padding: 10px 0;
+        font-size: 10px; /* Reduce footer font size */
+    }
+
+    .profile-content h2 {
+        font-size: 16px; /* Reduz o tamanho do título */
+    }
+
+    .profile-field label {
+        font-size: 11px; /* Ajusta o tamanho das labels */
+    }
+
+    .profile-field p {
+        font-size: 13px; /* Ajusta o tamanho do texto */
+    }
+
+    .edit-btn {
+        font-size: 13px; /* Ajusta o tamanho do botão */
+        padding: 8px;
+    }
+
+    .change-photo {
+        font-size: 12px; /* Ajusta o tamanho do botão de alterar foto */
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 14px; /* Ajusta o tamanho da fonte para telas menores */
+    }
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header .logo {
+        margin: 10px auto;
+        width: 80px; /* Adjust logo size */
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-entrar {
+        margin-top: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-img img {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+    }
+
+    .btn-cta {
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 15px 0;
+    }
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 480px) {
+    header {
+        height: auto;
+    }
+
+    .header .logo {
+        width: 60px; /* Further adjust logo size */
+    }
+
+    .hero-text h1 {
+        font-size: 22px; /* Reduce font size for smaller screens */
+    }
+
+    .sub-highlight {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .btn-cta {
+        font-size: 14px;
+    }
+
+    .nav {
+        gap: 5px;
+    }
+
+    .btn-entrar {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    footer {
+        padding: 10px 0;
+        font-size: 10px;
+    }
+}

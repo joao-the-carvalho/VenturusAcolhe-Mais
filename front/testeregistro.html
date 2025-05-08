@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro</title>
+</head>
+<body>
+  <h2>Registrar</h2>
+  <form id="formRegistro">
+    <input type="text" name="nome" placeholder="Nome" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="password" name="senha" placeholder="Senha" required><br>
+    <select name="cargo" required>
+      <option value="">Selecione o cargo</option>
+      <option value="usuario">Usuário</option>
+      <option value="psicologo">Psicólogo</option>
+    </select><br>
+    <button type="submit">Registrar</button>
+  </form>
+
+  <p id="resposta"></p>
+
+  <script>
+    const form = document.getElementById('formRegistro')
+    const resposta = document.getElementById('resposta')
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault()
+
+      const dados = {
+        nome: form.nome.value,
+        email: form.email.value,
+        senha: form.senha.value,
+        cargo: form.cargo.value
+      }
+
+      try {
+        const res = await fetch('/api/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(dados)
+        })
+
+        const json = await res.json()
+        resposta.textContent = json.mensagem
+      } catch (err) {
+        resposta.textContent = 'Erro ao registrar'
+        console.error(err)
+      }
+    })
+  </script>
+</body>
+</html>
