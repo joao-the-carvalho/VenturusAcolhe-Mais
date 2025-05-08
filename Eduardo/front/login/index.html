@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ACOLHE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../home/styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="../img's/logo.jpg" alt="logo acole+" class="logo">
+        <nav class="nav" aria-label="Navegação principal">
+            <ul class="nav-list">
+                <li>
+                    <a href="../funcionamento/index.html" class="nav-link">
+                        Como funciona
+                    </a>
+                </li>
+                <li>
+                    <a href="../psicologos/index.html" class="nav-link">
+                        Para psicólogos
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <button class="btn-entrar" onclick="window.location.href='../cadastro/index.html'">
+            Cadastrar
+        </button>
+    </header>
+
+    <div class="login-container">
+        <h1>Login</h1>
+
+        <div class="input-field">
+            <h2>Email</h2>
+            <input type="email" placeholder="Digite aqui..." class="input-placeholder">
+        </div>
+
+        <hr>
+
+        <div class="input-field">
+            <h2>Senha</h2>
+            <div class="password-container">
+                <input type="password" placeholder="Digite aqui..." class="input-placeholder" id="passwordInput">
+                <button type="button" class="toggle-password" onclick="togglePasswordVisibility()">👁️</button>
+            </div>
+        </div>
+
+        <button class="login-button" id="loginBtn">Entrar</button>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Acolhe+. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="menu.js"></script>
+</body>
+</html>

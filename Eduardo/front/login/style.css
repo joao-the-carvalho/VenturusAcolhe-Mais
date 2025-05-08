@@ -1,0 +1,235 @@
+body {
+    font-family: Georgia, serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo ocupe toda a altura da janela */
+    margin: 0;
+    background-color: #d8f0ff; /* Cor de fundo */
+    color: #000; /* Cor do texto */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave para cor de fundo e texto */
+}
+
+.login-container {
+    background-color: #eaf7ff; /* Clarear a cor de fundo */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave para o contêiner */
+    margin: auto; /* Centraliza o contêiner vertical e horizontalmente */
+    flex-shrink: 0; /* Evita encolhimento quando a altura da página é pequena */
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 1px;
+    color: #000; /* Cor do texto */
+}
+
+.user-type {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.type-option {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #000; /* Cor do texto */
+    transition: color 0.3s ease, border-bottom 0.3s ease; /* Transição suave para seleção de tipo de usuário */
+}
+
+.type-option.active {
+    color: #FFDDAE; /* Cor de fundo do botão */
+    border-bottom: 2px solid #FFDDAE;
+}
+
+.type-option:hover {
+    color: #FFC98B; /* Leve mudança de cor ao passar o mouse */
+    border-bottom: 2px solid #FFC98B; /* Cor ao passar o mouse */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+.input-field {
+    margin-bottom: 25px;
+}
+
+.input-field h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #000; /* Cor do texto */
+}
+
+.input-placeholder {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    color: #000; /* Cor do texto */
+    transition: border-bottom 0.3s ease; /* Transição suave para foco no input */
+}
+
+.input-placeholder:focus {
+    border-bottom: 2px solid #FFDDAE; /* Cor ao passar o mouse no botão */
+}
+
+.login-button {
+    background-color: #FFDDAE; /* Cor de fundo do botão */
+    color: #000; /* Cor do texto do botão */
+    border: none;
+    padding: 12px 20px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 20px 0;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for button hover and click */
+}
+
+.login-button:hover {
+    background-color: #FFC98B; /* Match button hover color */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.forgot-password {
+    text-align: center;
+    color: #FFDDAE; /* Match button background color */
+    text-decoration: none;
+    display: block;
+    margin-bottom: 30px;
+    transition: color 0.3s ease; /* Smooth transition for link hover */
+}
+
+.forgot-password:hover {
+    color: #FFC98B; /* Match hover color */
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link a {
+    color: #FFDDAE; /* Match button background color */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for link hover */
+}
+
+.register-link a:hover {
+    color: #FFC98B; /* Match hover color */
+}
+
+/* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%; /* Adjust container width */
+        padding: 20px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .header-title {
+        font-size: 20px; /* Adjust title size */
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-entrar {
+        margin-top: 10px;
+    }
+
+    .form-title {
+        font-size: 18px; /* Adjust form title size */
+    }
+
+    .form-button {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 18px; /* Further reduce title size */
+    }
+
+    .form-title {
+        font-size: 16px; /* Further reduce form title size */
+    }
+
+    .input-placeholder {
+        font-size: 12px; /* Adjust input font size */
+    }
+
+    .login-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .register-link {
+        font-size: 12px; /* Adjust footer font size */
+    }
+}
+
+footer {
+    background-color: #c6e7ff; /* Match header background color */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    color: #000;
+    width: 100%; /* Ensure it spans the full width */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Add spacing between elements */
+    margin-top: auto; /* Ensure the footer stays at the bottom */
+}
+
+footer p {
+    margin: 5px 0; /* Add spacing between paragraphs */
+}
+
+footer a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+}
+
+footer .social-icons a {
+    color: #000;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #FFDDAE; /* Match button background color */
+}

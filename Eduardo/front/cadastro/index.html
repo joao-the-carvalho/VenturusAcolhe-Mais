@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faça seu Cadastro - ACOLHE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../home/styles.css">
+</head>
+<body>
+    <header class="header">
+        <img src="../img's/logo.jpg" alt="logo acole+" class="logo">
+        <nav class="nav" aria-label="Navegação principal">
+            <ul class="nav-list">
+                <li>
+                    <a href="../funcionamento/index.html" class="nav-link">Como funciona</a>
+                </li>
+                <li>
+                    <a href="../psicologos/index.html" class="nav-link">Para psicólogos</a>
+                </li>
+            </ul>
+        </nav>
+        <button class="btn-entrar" onclick="window.location.href='../login/index.html'">Entrar</button>
+    </header>
+
+    <main class="main-container">
+        <div class="form-container">
+            <h1 class="form-title">Faça seu Cadastro</h1>
+
+            <div class="input-group">
+                <label for="nameInput" class="input-label">Nome</label>
+                <input type="text" id="nameInput" placeholder="Digite aqui..." class="input-field" required>
+            </div>
+
+            <div class="input-group">
+                <label for="userInput" class="input-label">Usuário</label>
+                <input type="email" id="emailInput" placeholder="Digite aqui..." class="input-field" required>
+            </div>
+
+            <div class="input-group">
+                <label for="dateInput" class="input-label">Data de Nascimento</label>
+                <input type="date" id="emailInput" class="input-field" required>
+            </div>
+
+            <div class="input-group">
+                <label for="phoneInput" class="input-label">Celular</label>
+                <div class="cell">
+                    <select name="ddd" id="ddd">
+                        <option value="11" selected>11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="22">22</option>
+                        <option value="21">21</option>
+                        <option value="24">24</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="31">31</option>
+                        <option value="32">32</option>
+                        <option value="33">33</option>
+                        <option value="34">34</option>
+                        <option value="35">35</option>
+                        <option value="37">37</option>
+                        <option value="38">38</option>
+                        <option value="41">41</option>
+                        <option value="42">42</option>
+                        <option value="43">43</option>
+                        <option value="44">44</option>
+                        <option value="45">45</option>
+                        <option value="46">46</option>
+                        <option value="47">47</option>
+                        <option value="48">48</option>
+                        <option value="49">49</option>
+                        <option value="51">51</option>
+                        <option value="53">53</option>
+                        <option value="54">54</option>
+                        <option value="55">55</option>
+                        <option value="61">61</option>
+                        <option value="62">62</option>
+                        <option value="63">63</option>
+                    </select>
+                    <input type="tel" id="phoneInput" placeholder="XXXXX-XXXX" pattern="[0-9]{5}-[0-9]{4}" class="input-field" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="emailInput" class="input-label">Email</label>
+                <input type="email" id="emailInput" placeholder="Digite aqui..." class="input-field" required>
+            </div>
+            <div class="btn-flex">
+                <button class="btn-submit">Cadastrar</button>
+            </div>
+        </div>
+    </main>
